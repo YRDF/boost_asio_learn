@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <IncludePath>G:\cppsoft\protobuf\protoc\include;G:\cppsoft\mysql\mysql-connector-c++-8.3.0-winx64\include;G:\cppsoft\redis\deps\hiredis;G:\cppsoft\boost\boost_1_87_0;G:\cppsoft\libjson\include;G:\cppsoft\mysql_connector\include;G:\cppsoft\redis\redis-use\deps\hiredis;$(IncludePath)</IncludePath>
+    <LibraryPath>G:\cppsoft\protobuf\protoc\bin;G:\cppsoft\mysql\mysql-connector-c++-8.3.0-winx64\lib64\vs14;G:\cppsoft\redis\lib;G:\cppsoft\libjson\lib;G:\cppsoft\boost\boost_1_87_0\stage\lib;G:\cppsoft\mysql_connector\lib64\vs14;G:\cppsoft\redis\redis-use\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>libprotobufd.lib;libprotocd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>G:\cppsoft\grpc\visualpro\third_party\re2\Debug;G:\cppsoft\grpc\visualpro\third_party\abseil-cpp\absl\types\Debug;G:\cppsoft\grpc\visualpro\third_party\abseil-cpp\absl\synchronization\Debug;G:\cppsoft\grpc\visualpro\third_party\abseil-cpp\absl\status\Debug;G:\cppsoft\grpc\visualpro\third_party\abseil-cpp\absl\random\Debug;G:\cppsoft\grpc\visualpro\third_party\abseil-cpp\absl\flags\Debug;G:\cppsoft\grpc\visualpro\third_party\abseil-cpp\absl\debugging\Debug;G:\cppsoft\grpc\visualpro\third_party\abseil-cpp\absl\container\Debug;G:\cppsoft\grpc\visualpro\third_party\abseil-cpp\absl\hash\Debug;G:\cppsoft\grpc\visualpro\third_party\boringssl-with-bazel\Debug;G:\cppsoft\grpc\visualpro\third_party\abseil-cpp\absl\numeric\Debug;G:\cppsoft\grpc\visualpro\third_party\abseil-cpp\absl\time\Debug;G:\cppsoft\grpc\visualpro\third_party\abseil-cpp\absl\base\Debug;G:\cppsoft\grpc\visualpro\third_party\abseil-cpp\absl\strings\Debug;G:\cppsoft\grpc\visualpro\third_party\protobuf\Debug;G:\cppsoft\grpc\visualpro\third_party\zlib\Debug;G:\cppsoft\grpc\visualpro\Debug;G:\cppsoft\grpc\visualpro\third_party\cares\cares\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>G:\cppsoft\grpc\third_party\re2;G:\cppsoft\grpc\third_party\address_sorting\include;G:\cppsoft\grpc\third_party\abseil-cpp;G\:\cppsoft\grpc\third_party\protobuf\src;G:\cppsoft\grpc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command> xcopy $(ProjectDir)config.ini  $(SolutionDir)$(Platform)\$(Configuration)\   /y
+ xcopy $(ProjectDir)*.dll   $(SolutionDir)$(Platform)\$(Configuration)\   /y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>
