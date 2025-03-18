@@ -5,7 +5,7 @@ void Session::Star(){
 	_socket.async_read_some(boost::asio::buffer(_data, max_length),
 		std::bind(&Session::handle_read,this,std::placeholders::_1,
 			std::placeholders::_2,shared_from_this()));
-
+	//在读取时，可以使用async_read读取指定头部字节数，减少切包步骤
 }
 
 void Session::PrintRecvData(char* data, int length){
