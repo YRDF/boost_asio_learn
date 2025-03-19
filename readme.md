@@ -9,3 +9,7 @@
 	学习使用jsoncpp对数据序列化
 	jsoncpp常用于客户端和服务器进行通信
 	逻辑单例类处理应用层逻辑,使用queue和map实现回调函数和数据存储
+	设计asio多线程模式1.启动多个线程(线程池)，每个线程管理一个iocontext，
+	线程池的每个iocontex可以处理多个连接
+	设计asio多线程模式2.启动多个线程(线程池)，每个线程共享同一个iocontext，
+	让iocontext.run在多个线程中调用
