@@ -5,6 +5,7 @@
 #include<csignal>
 #include<thread>
 #include<mutex>
+#include"AsioIOServicePool.h"
 //c风格处理服务器优雅退出
 bool bstop = false;
 std::condition_variable cond_quit;
@@ -42,6 +43,8 @@ int main()
 		////CServer s(io_context, 10086);
 		////io_context.run();
 
+		//使用ioservicepool线程池
+		auto pool = AsioIOServicePool::GetInstance();
 
 	//asio提供的方式:
 		boost::asio::io_context io_contex;
@@ -52,6 +55,7 @@ int main()
 
 		CServer s(io_contex, 10086);
 		io_contex.run();
+		//std::cout << "Boost version: " << BOOST_VERSION << std::endl;
 	}
 	catch (std::exception& e) {
 		std::cerr << "Exception: " << e.what() << endl;
