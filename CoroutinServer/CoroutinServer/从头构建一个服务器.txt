@@ -1,0 +1,8 @@
+创建const.h存储要用到的常量。
+先从MsgNode开始构建，MsgNode是消息发送，接收消息的父类。_cur_len表示当前长度，_total+len表示总长度，_data表示数据。
+定义接收节点RecvNode，包含消息长度和消息id。
+定义发送节点SendNode，包含发送数据的首地址，发送数据的长度，发送数据的消息id。
+创建一个单例类AsioIOServicePool，内含io_contex和防止其退出的work，使用指向work的智能指针管理work。
+添加一个CServer类，通过iocontex和port生成服务器，监听端口。_acceptor接收器，
+_session存储连接map，防止CSession被析构使用智能指针来保证存活。_mutex加锁
+添加一个CSession类，继承std::enable_shared_from_this，需要一个iocontex和一个CServer指针
