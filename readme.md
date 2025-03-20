@@ -12,4 +12,5 @@
 	设计asio多线程模式1.启动多个线程(线程池)，每个线程管理一个iocontext，
 	线程池的每个iocontex可以处理多个连接
 	设计asio多线程模式2.启动多个线程(线程池)，每个线程共享同一个iocontext，
-	让iocontext.run在多个线程中调用
+	让iocontext.run在多个线程中调用	
+	利用asio协程调度实现并发服务器
