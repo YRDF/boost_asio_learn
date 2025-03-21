@@ -9,7 +9,7 @@ public:
 	MsgNode(short max_len);
 	~MsgNode();
 	void Clear();
-protected:
+//protected:
 	short _cur_len;
 	short _total_len;
 	char* _data;
@@ -18,14 +18,14 @@ protected:
 class RecvNode :public MsgNode {
 public:
 	RecvNode(short max_len, short msg_id);
-private:
+//private:
 	short _msg_id;
 };
 
 class SendNode :public MsgNode {
 public:
 	SendNode(const char* msg, short max_len,short msg_id);
-private:
+//private:
 	short _msg_id;
 };
 

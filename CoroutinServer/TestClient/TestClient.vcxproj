@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a6a78f4f-94a8-45cd-a7e9-12d47f9e9fba}</ProjectGuid>
-    <RootNamespace>CoroutinServer</RootNamespace>
+    <ProjectGuid>{9e9e6893-0e91-4c41-8359-ad1a79038f3e}</ProjectGuid>
+    <RootNamespace>TestClient</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -105,7 +105,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,20 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AsioIOServicePool.cpp" />
-    <ClCompile Include="CoroutinServer.cpp" />
-    <ClCompile Include="CServer.cpp" />
-    <ClCompile Include="CSession.cpp" />
-    <ClCompile Include="LogicSystem.cpp" />
-    <ClCompile Include="MsgNode.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="AsioIOServicePool.h" />
-    <ClInclude Include="const.h" />
-    <ClInclude Include="CServer.h" />
-    <ClInclude Include="CSession.h" />
-    <ClInclude Include="LogicSystem.h" />
-    <ClInclude Include="MsgNode.h" />
+    <ClCompile Include="TestClient.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
