@@ -1,0 +1,4 @@
+生成给grpc服务的pb.h和pb.cc文件文件：
+G:\cppsoft\grpc\visualpro\third_party\protobuf\Debug\protoc.exe  -I="." --grpc_out="." --plugin=protoc-gen-grpc="G:\cppsoft\grpc\visualpro\Debug\grpc_cpp_plugin.exe" "demo.proto"
+生成消息需要的pb文件：
+G:\cppsoft\grpc\visualpro\third_party\protobuf\Debug\protoc.exe --cpp_out=. "demo.proto"
